@@ -5,18 +5,17 @@ import * as React from "react";
 
 import { CategoryDetails_category_products_edges_node } from "../../../categories/types/CategoryDetails";
 import Container from "../../../components/Container";
-import { FilterContentSubmitData } from "../../../components/Filter";
 import PageHeader from "../../../components/PageHeader";
 import ProductList from "../../../components/ProductList";
 import i18n from "../../../i18n";
-import { FilterViewProps, ListActions, PageListProps } from "../../../types";
+import { FilterPageProps, ListActions, PageListProps } from "../../../types";
 import { ProductListUrlFilters } from "../../urls";
 import ProductListFilter from "../ProductListFilter";
 
 export interface ProductListCardProps
   extends PageListProps,
     ListActions,
-    FilterViewProps<FilterContentSubmitData, ProductListUrlFilters> {
+    FilterPageProps<ProductListUrlFilters> {
   currencySymbol: string;
   products: CategoryDetails_category_products_edges_node[];
 }
